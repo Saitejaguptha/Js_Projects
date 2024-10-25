@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h1 {
+  font-size: 75px;
+  color: aliceblue;
+  letter-spacing: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  font-size: 20px;
+  border: 4px solid;
+  cursor: pointer;
+  transition: 1s background-color;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.split {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+
+.split.left {
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP0GwZucTWPCq0ZrNEegCfoZ3gIqIqxEdwdA&s");
+  background-size: cover;
+}
+
+.split.right {
+  position: absolute;
+  right: 0;
+  background-color: lightblue;
+  background-image: url("s24.png");
+  background-size: cover;
+}
+
+.active-left .left {
+  width: 75%;
+  background-color: lightblue; /* or any color you prefer */
+}
+
+.active-left .right {
+  width: 25%;
+  background-color: darkblue;
+}
+
+.active-right .left {
+  width: 25%;
+  background-color: darkblue;
+}
+
+.active-right .right {
+  width: 75%;
+  background-color: lightblue; /* or any color you prefer */
+}
+
+.left .right {
+  transition: width 2s ease-in-out;
+}

@@ -1,0 +1,107 @@
+/* General body styling */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  font-family: cursive;
+  background-color: slateblue;
+}
+
+/* Diviso for the calendar and button */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for the calendar display */
+.clander_conatiner {
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px, 8px, rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Styles for the month name display */
+.month-name {
+  margin: 0;
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Styles for the day name display */
+.day-name {
+  font-size: 20px;
+  color: darkgray;
+}
+
+/* Styles for the day number display */
+.day-number {
+  font-size: 80px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Styles for the year display */
+.year {
+  margin: 20px 0;
+  color: darkgrey;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Container for the button */
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Styles for the button */
+.btn {
+  background-color: yellow;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-element for hover effect */
+.btn::before {
+  content: "";
+  background-color: orangered;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+/*Displays hover effect when mouser is hover on the button*/
+.btn:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Reset hover effect when no-hover class is added */
+.btn.no-hover::before {
+  width: 0;
+  height: 0;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
